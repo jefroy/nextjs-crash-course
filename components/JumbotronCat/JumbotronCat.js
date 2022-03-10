@@ -12,7 +12,7 @@ export default function JumbotronCat() {
                         <hr className="my-4" />
                         <p>Find a cyat.</p>
                         <p className="lead">
-                            <a className="btn btn-primary btn-lg" href="#" role="button">LESGO</a>
+                            <a className="btn btn-primary btn-lg" href={"/cats"} role="button">LESGO</a>
                         </p>
                     </div>
                 </CardBody>
