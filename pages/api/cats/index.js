@@ -1,5 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-// localhost:3000/api/hello
+
+// localhost:3000/api/cats
+
+import {cats} from '../../../data'
+
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+    res.status(200).json(cats)
 }
