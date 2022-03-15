@@ -3,7 +3,7 @@ import {Button, Card, CardBody, CardGroup, CardHeader, CardImg, CardSubtitle, Ca
 import {Cat} from '../../models/Cat'
 
 export default function CardCat({props}) {
-    // debugger
+    console.log("GO TO THE BATHROOM")
     let cat = new Cat(props)
     return (
         <Card className={"m-3"}>
@@ -17,7 +17,7 @@ export default function CardCat({props}) {
             <CardBody>
                 <CardTitle tag="h5">Behold! Cat #{cat.id}</CardTitle>
                 <CardSubtitle className="mb-2 text-muted" tag="h6">
-                    tianna was here xoxo
+                    more sample text
                 </CardSubtitle>
                 <CardText>
                     {cat.name} <br/>

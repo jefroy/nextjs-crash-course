@@ -2,13 +2,14 @@ import React from "react"
 import {Card, CardBody} from "reactstrap";
 
 export default function JumbotronCat() {
+    console.log("she kinda cute 👀")
     return (
-        <div>
+        <div className={"m-3"}>
             <Card>
                 <CardBody>
                     <div className="jumbotron">
-                        <h1 className="display-4">Hello, Tianna!</h1>
-                        <p className="lead">Sample text for my little lamb :)</p>
+                        <h1 className="display-4">Hello, Good day!</h1>
+                        <p className="lead">Sample text :)</p>
                         <hr className="my-4" />
                         <p>Find a cyat.</p>
                         <p className="lead">

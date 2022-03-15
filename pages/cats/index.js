@@ -5,15 +5,15 @@ import {useEffect, useState} from "react";
 import CardCat from "../../components/CardCat/CardCat";
 
 export default function Index() {
+    console.log("i wa hug she and ellie :(")
     const [cats, setCats] = useState([])
-
-    const fetchCats = async () => {
-        const response = await fetch('/api/cats')
-        const data = await response.json()
-        setCats(data)
-    }
-
+    
     useEffect(() => {
+        const fetchCats = async () => {
+            const response = await fetch('/api/cats')
+            const data = await response.json()
+            setCats(data)
+        }
         fetchCats()
     }, [])
 

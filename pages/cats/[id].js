@@ -12,15 +12,14 @@ export default function Cat() {
     const router = useRouter()
     const {id} = router.query
 
-    const fetchCat = async () => {
-        if (id){
-            const response = await fetch(`/api/cats/${id}`)
-            const data = await response.json()
-            setCat(data)
-        }
-    }
-
     useEffect(() => {
+        const fetchCat = async () => {
+            if (id){
+                const response = await fetch(`/api/cats/${id}`)
+                const data = await response.json()
+                setCat(data)
+            }
+        }
         fetchCat()
     }, [id])
 

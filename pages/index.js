@@ -8,12 +8,13 @@ import {Container} from "reactstrap";
 import Link from 'next/link'
 
 export default function Home() {
-  return (
-      <div>
-          <NavbarCat />
-          <Container>
-              <JumbotronCat />
-          </Container>
-      </div>
-  )
+    console.log("tianna kinda cool tbh")
+    return (
+        <div>
+            <NavbarCat />
+            <Container>
+                <JumbotronCat />
+            </Container>
+        </div>
+    )
 }
