@@ -47,7 +47,7 @@ export default function NavbarCat() {
                                 <DropdownToggle caret nav>
                                     Pages
                                 </DropdownToggle>
-                                <DropdownMenu right>
+                                <DropdownMenu end>
                                     <DropdownItem onClick={() => router.push("/")}>
                                         Home
                                     </DropdownItem>
