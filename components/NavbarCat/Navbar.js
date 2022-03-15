@@ -10,65 +10,57 @@ import {
     NavLink,
     UncontrolledDropdown
 } from "reactstrap";
+import Link from 'next/link'
+import {useRouter} from "next/router";
 
 export default function NavbarCat() {
-  return (
-      <div>
-          <div>
-              <Navbar
-                  color="light"
-                  expand="md"
-                  light
-              >
-                  <NavbarBrand href="/">
-                      Cat World
-                  </NavbarBrand>
-                  <NavbarToggler onClick={function noRefCheck(){}} />
-                  <Collapse navbar>
-                      <Nav
-                          className="me-auto"
-                          navbar
-                      >
-                          {/*<NavItem>*/}
-                          {/*    <NavLink href="/components/">*/}
-                          {/*        Components*/}
-                          {/*    </NavLink>*/}
-                          {/*</NavItem>*/}
-                          {/*<NavItem>*/}
-                          {/*    <NavLink href="https://github.com/reactstrap/reactstrap">*/}
-                          {/*        GitHub*/}
-                          {/*    </NavLink>*/}
-                          {/*</NavItem>*/}
-                          {/*<UncontrolledDropdown*/}
-                          {/*    inNavbar*/}
-                          {/*    nav*/}
-                          {/*>*/}
-                          {/*    <DropdownToggle*/}
-                          {/*        caret*/}
-                          {/*        nav*/}
-                          {/*    >*/}
-                          {/*        Options*/}
-                          {/*    </DropdownToggle>*/}
-                          {/*    <DropdownMenu right>*/}
-                          {/*        <DropdownItem>*/}
-                          {/*            Option 1*/}
-                          {/*        </DropdownItem>*/}
-                          {/*        <DropdownItem>*/}
-                          {/*            Option 2*/}
-                          {/*        </DropdownItem>*/}
-                          {/*        <DropdownItem divider />*/}
-                          {/*        <DropdownItem>*/}
-                          {/*            Reset*/}
-                          {/*        </DropdownItem>*/}
-                          {/*    </DropdownMenu>*/}
-                          {/*</UncontrolledDropdown>*/}
-                      </Nav>
-                      <NavbarText>
-                          Simple Text
-                      </NavbarText>
-                  </Collapse>
-              </Navbar>
-          </div>
-      </div>
-  )
+    const router = useRouter()
+    return (
+        <div>
+            <div>
+                <Navbar
+                    color="light"
+                    expand="md"
+                    light
+                >
+                    <NavbarBrand
+                        // onClick={() => router.push("/")}
+                        href={'/'}
+                    >
+                        Cat World
+                    </NavbarBrand>
+                    <NavbarToggler onClick={function noRefCheck(){}} />
+                    <Collapse navbar>
+                        <Nav
+                            className="me-auto"
+                            navbar
+                        >
+                            <NavItem>
+                                <NavLink href="https://github.com/jefroy/nextjs-crash-course">
+                                    GitHub
+                                </NavLink>
+                            </NavItem>
+                            <UncontrolledDropdown
+                                inNavbar
+                                nav
+                            >
+                                <DropdownToggle caret nav>
+                                    Pages
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem onClick={() => router.push("/")}>
+                                        Home
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem onClick={() => router.push("/cats")}>
+                                        Cats
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+            </div>
+        </div>
+    )
 }
