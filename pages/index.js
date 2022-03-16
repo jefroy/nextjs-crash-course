@@ -12,6 +12,9 @@ export default function Home() {
     console.log("tianna kinda cool tbh")
     return (
         <div>
+            <Head>
+                <title>Cat World</title>
+            </Head>
             <DefaultLayout>
                 <JumbotronCat />
             </DefaultLayout>

@@ -6,6 +6,7 @@ import CardCat from "../../components/CardCat/CardCat";
 import {useRouter} from "next/router";
 import DetailsCat from "../../components/DetailsCat/DetailsCat";
 import DefaultLayout from "../../layouts/Default";
+import Head from "next/head";
 
 export default function Cat() {
     const [cat, setCat] = useState(null)
@@ -26,6 +27,9 @@ export default function Cat() {
 
     return (
         <div>
+            <Head>
+                <title>Cat World - Not Bart</title>
+            </Head>
             <DefaultLayout>
                 {cat && (
                     <DetailsCat props={cat} />
